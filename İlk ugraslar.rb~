@@ -1,0 +1,21 @@
+class Ogrenci 
+	
+	def initialize
+		print "isim"		
+		@ad=gets
+		print "soyisim"
+		@soyad=gets
+		print "tc"
+		@tc=gets
+		print "okul_no"
+		@okul_no=gets
+	end
+	
+	def dosyaya_at
+		
+		dizi=@ad+" "+@soyad+" "+@tc+" "+@okul_no
+		dosya=File.open("rabs","w")
+		dosya.puts(dizi)
+		dosya.close	
+	end
+end
